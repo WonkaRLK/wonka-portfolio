@@ -30,7 +30,7 @@ export default function Process({ id }: { id?: string }) {
     <section id={id} className="py-20 px-6 max-w-5xl mx-auto">
       <ScrollReveal>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-wonka-gold text-glow-gold text-center mb-14">
-          Cómo laburo
+          ¿Cómo trabajo?
         </h2>
       </ScrollReveal>
 

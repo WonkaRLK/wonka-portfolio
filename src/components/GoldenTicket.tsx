@@ -23,7 +23,7 @@ export default function GoldenTicket() {
           {/* Texto debajo */}
           <div className="rounded-xl border-2 border-wonka-gold bg-gradient-to-r from-wonka-gold via-wonka-gold-light to-wonka-gold bg-[length:200%_auto] animate-shimmer px-8 py-6 text-center max-w-xl">
             <p className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-wonka-purple-dark tracking-wide">
-              ¿Tenés un proyecto en mente? Dale, arrancamos.
+              ¿Tenés un proyecto en mente?
             </p>
           </div>
         </div>

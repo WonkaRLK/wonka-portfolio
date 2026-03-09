@@ -3,7 +3,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const metrics = [
-  { value: "2+", label: "Proyectos en producción" },
+  { value: "4+", label: "Proyectos en producción" },
   { value: "100%", label: "Clientes que repiten" },
   { value: "<24hs", label: "Te respondo" },
 ];
