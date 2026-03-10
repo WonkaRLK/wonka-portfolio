@@ -30,7 +30,7 @@ export const projects: Project[] = [
     name: "Kloven Streetwear",
     description:
       "E-commerce de ropa streetwear con variantes de talle/color, códigos promocionales y cálculo de envío.",
-    image: "/projects/kloven-streetwear.png",
+    image: "/projects/kloven-streetwear.webp",
     url: "https://kloven-web.vercel.app",
     tech: ["Next.js", "Supabase", "MercadoPago", "Tailwind CSS"],
     highlights: [
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     name: "Alojamientos La Chay",
     description:
       "Web de alquileres temporarios con sistema multi-propiedad, galería interactiva y reserva directa por WhatsApp.",
-    image: "/projects/alojamientos-la-chay.png",
+    image: "/projects/alojamientos-la-chay.webp",
     url: "https://la-chay-web.vercel.app",
     tech: ["HTML", "CSS", "JavaScript", "GSAP"],
     highlights: [

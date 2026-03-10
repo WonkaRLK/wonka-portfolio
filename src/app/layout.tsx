@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Wonka | Desarrollo Web",
     description:
       "Hago tiendas online, webs y apps que funcionan de verdad. Si tenés una idea, la construyo.",
-    url: "https://wonka.dev",
+    url: "https://wonka.online",
     siteName: "Wonka",
     locale: "es_AR",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description:
       "Hago tiendas online, webs y apps que funcionan de verdad. Si tenés una idea, la construyo.",
   },
-  metadataBase: new URL("https://wonka.dev"),
+  metadataBase: new URL("https://wonka.online"),
 };
 
 export default function RootLayout({
