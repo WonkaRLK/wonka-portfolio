@@ -46,7 +46,7 @@ export const projects: Project[] = [
     description:
       "Sistema de gestión para centro de estética con pacientes, sesiones de tratamiento, productos y consentimientos digitales.",
     image: "/projects/velvet-crm.png",
-    url: "https://velvet.vercel.app",
+    url: "https://velvet-umber.vercel.app",
     tech: ["Next.js", "Supabase", "Tailwind CSS"],
     highlights: [
       "Gestión de pacientes",
