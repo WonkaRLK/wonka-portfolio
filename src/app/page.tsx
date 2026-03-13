@@ -17,19 +17,21 @@ export default function Home() {
   return (
     <main className="relative">
       <AnimatedBackground />
-      <FloatingChocolates />
-      <Navbar />
-      <Hero />
-      <Services id="servicios" />
-      <GoldenTicket />
-      <Process id="proceso" />
-      <TechStack />
-      <Projects id="proyectos" />
-      <Results id="resultados" />
-      <FAQ id="preguntas" />
-      <ContactForm id="contacto" />
-      <Footer />
-      <WhatsAppButton />
+      <div className="relative z-10">
+        <FloatingChocolates />
+        <Navbar />
+        <Hero />
+        <Services id="servicios" />
+        <GoldenTicket />
+        <Process id="proceso" />
+        <TechStack />
+        <Projects id="proyectos" />
+        <Results id="resultados" />
+        <FAQ id="preguntas" />
+        <ContactForm id="contacto" />
+        <Footer />
+        <WhatsAppButton />
+      </div>
     </main>
   );
 }
