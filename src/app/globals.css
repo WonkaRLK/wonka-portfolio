@@ -135,7 +135,7 @@ body {
 
 /* Gold text glow */
 .text-glow-gold {
-  text-shadow: 0 0 20px rgba(212, 168, 67, 0.5), 0 0 40px rgba(212, 168, 67, 0.3);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Nebula gradients */
