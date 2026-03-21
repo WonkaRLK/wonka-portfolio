@@ -1,27 +1,29 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+
+const COLORS = [
+  "#D4A843", // wonka-gold
+  "#F0D48A", // wonka-gold-light
+  "#3B1261", // wonka-purple
+  "#5C2D91", // wonka-purple-light
+  "#5D4037", // wonka-chocolate-light
+];
+
+function getColor() {
+  return COLORS[Math.floor(Math.random() * COLORS.length)];
+}
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
-  const colors = [
-    "--wonka-gold",
-    "--wonka-gold-light",
-    "--wonka-purple",
-    "--wonka-purple-light",
-    "--wonka-chocolate-light",
-  ];
-
-  const getRandomColor = () =>
-    colors[Math.floor(Math.random() * colors.length)];
 
   return (
     <div
       style={{
-        transform: "translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)",
+        transform:
+          "translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)",
       }}
       className={cn(
         "absolute left-1/4 p-4 -top-1/4 flex -translate-x-1/2 -translate-y-1/2 w-full h-full z-0",
@@ -30,13 +32,17 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {...rest}
     >
       {rows.map((_, i) => (
-        <motion.div key={`row-${i}`} className="w-16 h-8 border-l border-wonka-chocolate-light/70 relative">
+        <div key={`row-${i}`} className="w-16 h-8 border-l border-wonka-chocolate-light/70 relative">
           {cols.map((_, j) => (
-            <motion.div
-              whileHover={{ backgroundColor: `var(${getRandomColor()})`, transition: { duration: 0 } }}
-              animate={{ transition: { duration: 2 } }}
+            <div
               key={`col-${j}`}
-              className="w-16 h-8 border-r border-t border-wonka-chocolate-light/70 relative"
+              className="box-cell w-16 h-8 border-r border-t border-wonka-chocolate-light/70 relative transition-colors duration-0 hover:duration-0"
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.backgroundColor = getColor();
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.backgroundColor = "";
+              }}
             >
               {j % 2 === 0 && i % 2 === 0 && (
                 <svg
@@ -50,9 +56,9 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                 </svg>
               )}
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       ))}
     </div>
   );
