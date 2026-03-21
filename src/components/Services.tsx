@@ -56,7 +56,7 @@ export default function Services({ id }: { id?: string }) {
         {services.map((service, i) => (
           <ScrollReveal key={service.title} delay={i * 0.15}>
             <CardContainer containerClassName="w-full" className="w-full">
-              <CardBody className="bg-wonka-chocolate border border-wonka-chocolate-light rounded-2xl p-8 text-center w-full hover:shadow-[0_20px_60px_rgba(212,168,67,0.35)] transition-shadow duration-300">
+              <CardBody className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 text-center w-full hover:shadow-[0_20px_60px_rgba(212,168,67,0.35)] transition-shadow duration-300">
                 <CardItem translateZ={200} className="flex justify-center mb-5 w-full">
                   {service.icon}
                 </CardItem>

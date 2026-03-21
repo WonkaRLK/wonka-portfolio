@@ -102,7 +102,7 @@ export default function TechStack() {
               key={tech.name}
               as="div"
               containerClassName="rounded-xl w-full"
-              className="group flex flex-col items-center gap-3 bg-wonka-chocolate/80 p-5 w-full hover:shadow-[0_0_20px_rgba(212,168,67,0.15)] transition-shadow duration-300"
+              className="group flex flex-col items-center gap-3 bg-white/5 backdrop-blur-sm p-5 w-full hover:shadow-[0_0_20px_rgba(212,168,67,0.15)] transition-shadow duration-300"
             >
               <div className="text-wonka-cream-dark group-hover:text-wonka-gold transition-colors duration-300">
                 {tech.icon}

@@ -46,7 +46,7 @@ export default function FAQ({ id }: { id?: string }) {
       <div className="space-y-3">
         {faqs.map((faq, i) => (
           <ScrollReveal key={i} delay={i * 0.08}>
-            <div className="rounded-xl bg-wonka-chocolate border border-wonka-chocolate-light overflow-hidden">
+            <div className="rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 text-left cursor-pointer"
