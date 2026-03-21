@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const technologies = [
   {
@@ -97,9 +98,11 @@ export default function TechStack() {
       <ScrollReveal delay={0.1}>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {technologies.map((tech) => (
-            <div
+            <HoverBorderGradient
               key={tech.name}
-              className="group flex flex-col items-center gap-3 rounded-xl bg-wonka-chocolate/50 border border-wonka-chocolate-light/50 p-5 hover:shadow-[0_0_20px_rgba(212,168,67,0.2)] hover:border-wonka-gold/40 transition-all duration-300"
+              as="div"
+              containerClassName="rounded-xl w-full"
+              className="group flex flex-col items-center gap-3 bg-wonka-chocolate/80 p-5 w-full hover:shadow-[0_0_20px_rgba(212,168,67,0.15)] transition-shadow duration-300"
             >
               <div className="text-wonka-cream-dark group-hover:text-wonka-gold transition-colors duration-300">
                 {tech.icon}
@@ -107,7 +110,7 @@ export default function TechStack() {
               <span className="font-body text-xs text-wonka-cream-dark group-hover:text-wonka-gold-light transition-colors duration-300">
                 {tech.name}
               </span>
-            </div>
+            </HoverBorderGradient>
           ))}
         </div>
       </ScrollReveal>

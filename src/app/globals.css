@@ -97,6 +97,42 @@ body {
   animation: sparkle 3s ease-in-out infinite;
 }
 
+/* Rotating border gradient */
+@keyframes spin-border {
+  0%   { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.border-rotate {
+  --border-angle: 0deg;
+  animation: spin-border 3s linear infinite;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 70%,
+    #F0D48A 85%,
+    #D4A843 90%,
+    #F0D48A 95%,
+    transparent 100%
+  );
+}
+
+.border-rotate-hover {
+  background: conic-gradient(
+    from 0deg,
+    #F0D48A,
+    #D4A843,
+    #F0D48A,
+    #D4A843,
+    #F0D48A
+  );
+}
+
 /* Gold text glow */
 .text-glow-gold {
   text-shadow: 0 0 20px rgba(212, 168, 67, 0.5), 0 0 40px rgba(212, 168, 67, 0.3);

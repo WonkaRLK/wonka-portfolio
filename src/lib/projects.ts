@@ -3,6 +3,7 @@ export interface Project {
   name: string;
   description: string;
   image: string;
+  images?: string[];
   url: string;
   tech: string[];
   highlights: string[];
@@ -15,7 +16,8 @@ export const projects: Project[] = [
     name: "Biblioteca Oculta",
     description:
       "Tienda online de libros digitales con pagos integrados vía MercadoPago y entrega automática por email.",
-    image: "/projects/biblioteca-oculta.png",
+    image: "/projects/biblioteca-light.png",
+    images: ["/projects/biblioteca-light.png", "/projects/biblioteca-dark.png"],
     url: "https://bibliotecaoculta.vercel.app",
     tech: ["Next.js", "Supabase", "MercadoPago", "Resend", "Tailwind CSS"],
     highlights: [
@@ -30,7 +32,8 @@ export const projects: Project[] = [
     name: "Kloven Streetwear",
     description:
       "E-commerce de ropa streetwear con variantes de talle/color, códigos promocionales y cálculo de envío.",
-    image: "/projects/kloven-streetwear.webp",
+    image: "/projects/kloven-1.png",
+    images: ["/projects/kloven-1.png", "/projects/kloven-2.png"],
     url: "https://kloven-web.vercel.app",
     tech: ["Next.js", "Supabase", "MercadoPago", "Tailwind CSS"],
     highlights: [
@@ -56,11 +59,28 @@ export const projects: Project[] = [
     year: 2026,
   },
   {
+    slug: "furech-crm",
+    name: "FurechCRM",
+    description:
+      "Plataforma CRM para equipos comerciales con automatización de flujos, analítica avanzada e integraciones con +50 herramientas.",
+    image: "/projects/furech-crm.png",
+    images: ["/projects/furech-crm.png", "/projects/furech-crm-light.png"],
+    url: "https://furech.com",
+    tech: ["Next.js"],
+    highlights: [
+      "Automatización de flujos",
+      "Analítica avanzada",
+      "Dark/Light mode",
+    ],
+    year: 2026,
+  },
+  {
     slug: "alojamientos-la-chay",
     name: "Alojamientos La Chay",
     description:
       "Web de alquileres temporarios con sistema multi-propiedad, galería interactiva y reserva directa por WhatsApp.",
-    image: "/projects/alojamientos-la-chay.webp",
+    image: "/projects/lachay-1.png",
+    images: ["/projects/lachay-1.png", "/projects/lachay-2.png", "/projects/lachay-3.png", "/projects/lachay-4.png"],
     url: "https://la-chay-web.vercel.app",
     tech: ["HTML", "CSS", "JavaScript", "GSAP"],
     highlights: [

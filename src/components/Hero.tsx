@@ -1,6 +1,59 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
+import { Boxes } from "@/components/ui/background-boxes";
+
+function FloatingLetter({ letter, index }: { letter: string; index: number }) {
+  const [hovered, setHovered] = useState(false);
+
+  // Each letter gets a unique float phase
+  const floatY = [-12, -18, -10, -15, -8][index % 5];
+  const duration = [2.8, 3.2, 2.5, 3.6, 2.9][index % 5];
+  const delay = index * 0.15;
+
+  return (
+    <motion.span
+      className="inline-block text-9xl sm:text-[10rem] md:text-[13rem] text-wonka-gold cursor-default"
+      style={{ textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 8px 40px rgba(0,0,0,0.5)" }}
+      animate={
+        hovered
+          ? {
+              y: -80,
+              x: (index - 2) * 30,
+              opacity: 0,
+              scale: 0.5,
+              rotate: (index % 2 === 0 ? 1 : -1) * 30,
+            }
+          : {
+              y: [0, floatY, 0],
+              opacity: 1,
+              scale: 1,
+              rotate: 0,
+              x: 0,
+            }
+      }
+      transition={
+        hovered
+          ? { duration: 0.3, ease: "easeOut" }
+          : {
+              y: { duration, repeat: Infinity, ease: "easeInOut", delay },
+              opacity: { duration: 0.4 },
+              scale: { duration: 0.4 },
+              rotate: { duration: 0.4 },
+              x: { duration: 0.4 },
+            }
+      }
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => {
+        setTimeout(() => setHovered(false), 100);
+      }}
+    >
+      {letter}
+    </motion.span>
+  );
+}
 
 const sparkles = [
   { id: 0, size: 7, left: 12, top: 8, delay: 0, duration: 4 },
@@ -19,12 +72,28 @@ const sparkles = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-transparent pt-28 sm:pt-36 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-wonka-purple-dark pt-28 sm:pt-36 pb-20">
+      {/* Background boxes */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <Boxes />
+      </div>
+
+      {/* Fade mask */}
+      <div className="absolute inset-0 bg-wonka-purple-dark [mask-image:radial-gradient(transparent,white)] pointer-events-none z-10" />
+
+      {/* Vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          background: "radial-gradient(ellipse at center, transparent 30%, rgba(10,4,20,0.7) 70%, rgba(10,4,20,0.95) 100%)",
+        }}
+      />
+
       {/* Sparkles */}
       {sparkles.map((s) => (
         <div
           key={s.id}
-          className="absolute rounded-full bg-wonka-gold-light animate-float pointer-events-none"
+          className="absolute rounded-full bg-wonka-gold-light animate-float pointer-events-none z-20"
           style={{
             width: s.size,
             height: s.size,
@@ -37,22 +106,25 @@ export default function Hero() {
         />
       ))}
 
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      {/* Content */}
+      <div className="relative z-20 text-center px-6 max-w-3xl mx-auto">
         <motion.h1
-          className="text-9xl sm:text-[10rem] md:text-[13rem] text-wonka-gold text-glow-gold select-none"
+          className="flex justify-center select-none"
           style={{ fontFamily: "var(--font-wonka-logo)" }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Wonka
+          {"Wonka".split("").map((letter, i) => (
+            <FloatingLetter key={i} letter={letter} index={i} />
+          ))}
         </motion.h1>
 
         <motion.p
           className="font-script text-2xl sm:text-3xl md:text-4xl text-wonka-gold-light mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         >
           tu idea, hecha web
         </motion.p>
@@ -61,23 +133,31 @@ export default function Hero() {
           className="font-body text-base sm:text-lg text-wonka-cream-dark mt-6 max-w-xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.4, delay: 0.35 }}
         >
-          Hago webs y tiendas online que funcionan. Vos me contás qué necesitás,
-          yo me encargo de que quede bien y ande de 10.
+          Desarrollo sitios web y e-commerce a medida — con diseño cuidado,
+          tecnología moderna y foco en resultados.
         </motion.p>
 
-        <motion.a
-          href="https://wa.me/5493442472884?text=Hola%20Wonka!%20Me%20interesa%20un%20proyecto%20web"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-10 px-8 py-4 rounded-full font-body font-semibold text-wonka-purple-dark bg-gradient-to-r from-wonka-gold via-wonka-gold-light to-wonka-gold bg-[length:200%_auto] animate-shimmer hover:scale-105 transition-transform duration-300"
+        <motion.div
+          className="mt-10 flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.4, delay: 0.5 }}
         >
-          Charlemos
-        </motion.a>
+          <a
+            href="https://wa.me/5493442472884?text=Hola%20Wonka!%20Me%20interesa%20un%20proyecto%20web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-full font-body font-semibold text-wonka-purple-dark bg-gradient-to-r from-wonka-gold via-wonka-gold-light to-wonka-gold bg-[length:200%_auto] animate-shimmer hover:scale-105 transition-transform duration-300"
+          >
+            <LayoutTextFlip
+              text="Comencemos"
+              words={["ya", "ahora", "de una", "hoy", "juntos"]}
+              wordClassName="text-wonka-purple font-black"
+            />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

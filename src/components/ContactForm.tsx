@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export default function ContactForm({ id }: { id?: string }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -96,13 +97,11 @@ export default function ContactForm({ id }: { id?: string }) {
             />
           </div>
 
-          <button
+          <InteractiveHoverButton
             type="submit"
             disabled={status === "loading"}
-            className="w-full py-3 rounded-lg font-heading font-bold text-lg text-wonka-purple-dark bg-gradient-to-r from-wonka-gold via-wonka-gold-light to-wonka-gold animate-shimmer disabled:opacity-60 hover:shadow-[0_0_25px_rgba(212,168,67,0.5)] transition-shadow cursor-pointer"
-          >
-            {status === "loading" ? "Enviando..." : "Enviar"}
-          </button>
+            text={status === "loading" ? "Enviando..." : "Enviar"}
+          />
 
           {status === "success" && (
             <p className="text-center font-body text-sm text-green-400">
