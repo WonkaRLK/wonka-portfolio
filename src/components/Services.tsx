@@ -39,7 +39,7 @@ const services = [
 
 export default function Services({ id }: { id?: string }) {
   return (
-    <section id={id} className="py-20 px-6 max-w-5xl mx-auto">
+    <section id={id} className="pt-36 pb-20 px-6 max-w-5xl mx-auto">
       <ScrollReveal>
         <h2 className="font-heading font-bold text-4xl sm:text-5xl text-wonka-gold text-glow-gold text-center mb-14">
           <EncryptedText
