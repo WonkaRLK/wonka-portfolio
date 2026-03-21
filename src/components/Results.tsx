@@ -22,7 +22,7 @@ export default function Results({ id }: { id?: string }) {
           {metrics.map((metric) => (
             <div
               key={metric.label}
-              className="text-center rounded-2xl bg-wonka-chocolate/50 border border-wonka-chocolate-light/50 p-8"
+              className="text-center rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-8"
             >
               <p className="font-heading font-bold text-5xl text-wonka-gold text-glow-gold">
                 {metric.value}
