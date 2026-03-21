@@ -73,8 +73,8 @@ const sparkles = [
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-wonka-purple-dark pt-28 sm:pt-36 pb-20">
-      {/* Background boxes */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
+      {/* Background boxes — solo desktop */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden hidden md:block">
         <Boxes />
       </div>
 
