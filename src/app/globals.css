@@ -114,10 +114,10 @@ body {
   animation: spin-border 3s linear infinite;
   background: conic-gradient(
     from var(--border-angle),
-    transparent 70%,
-    #F0D48A 85%,
-    #D4A843 90%,
-    #F0D48A 95%,
+    transparent 75%,
+    rgba(240, 212, 138, 0.35) 85%,
+    rgba(212, 168, 67, 0.45) 90%,
+    rgba(240, 212, 138, 0.35) 95%,
     transparent 100%
   );
 }
@@ -125,11 +125,11 @@ body {
 .border-rotate-hover {
   background: conic-gradient(
     from 0deg,
-    #F0D48A,
-    #D4A843,
-    #F0D48A,
-    #D4A843,
-    #F0D48A
+    rgba(240, 212, 138, 0.5),
+    rgba(212, 168, 67, 0.6),
+    rgba(240, 212, 138, 0.5),
+    rgba(212, 168, 67, 0.6),
+    rgba(240, 212, 138, 0.5)
   );
 }
 
