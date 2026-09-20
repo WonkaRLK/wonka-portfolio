@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Parque Hotel · Alojamiento en Merlo</title>
+<meta name="description" content="Cabañas equipadas, tranquilidad y atención de los dueños. Consultá disponibilidad por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--bg2:#e8e0d2;--fg:#1f2a22;--accent:#2f5d46;--accent2:#c27c3a;--display:'Lora',serif;--body:'Nunito Sans',sans-serif;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+em{font-style:italic;color:var(--accent)}
+.wrap{width:min(1180px,92vw);margin:0 auto;position:relative;z-index:1}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+.demo{position:fixed;bottom:22px;left:22px;z-index:50;background:var(--fg);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border-radius:999px;opacity:.85}
+.demo b{color:var(--accent2)}
+nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--fg) 8%,transparent)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--display);font-size:22px;font-weight:600}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:400}
+nav ul a{opacity:.75}nav ul a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:500;font-size:15px;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--accent);color:#fff;box-shadow:0 10px 30px -10px var(--accent)}
+.btn-s{border:1px solid color-mix(in srgb,var(--fg) 25%,transparent)}
+.btn svg{width:18px;height:18px}
+nav .btn{padding:10px 18px;font-size:14px}
+/* hero */
+.hero{position:relative;min-height:92vh;display:grid;align-items:end;padding:120px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.9);animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 8%,color-mix(in srgb,var(--bg) 62%,transparent) 45%,color-mix(in srgb,var(--bg) 12%,transparent) 100%)}
+.hero-mesh{position:absolute;inset:-20%;z-index:0;background:radial-gradient(60% 50% at 20% 30%,color-mix(in srgb,var(--accent) 35%,transparent),transparent 70%),radial-gradient(50% 40% at 80% 20%,color-mix(in srgb,var(--accent2) 45%,transparent),transparent 70%),radial-gradient(40% 40% at 60% 90%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 70%);filter:blur(40px);animation:drift 20s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) rotate(0)}to{transform:translate(4%,-3%) rotate(6deg)}}
+.hero .wrap{display:grid;gap:26px;max-width:860px;margin-left:calc((100vw - min(1180px,92vw))/2)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(6px);padding:8px 14px 8px 12px;border-radius:999px;width:fit-content}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent2)}
+.hero h1{font-size:clamp(46px,7.5vw,104px)}
+.hero p{font-size:clamp(17px,1.5vw,21px);max-width:560px;opacity:.85}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.rating{display:inline-flex;align-items:center;gap:10px;background:color-mix(in srgb,var(--fg) 6%,transparent);border:1px solid color-mix(in srgb,var(--fg) 10%,transparent);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:400;width:fit-content}
+.rating .s{color:var(--accent2);letter-spacing:2px}
+.rating b{font-weight:600}
+.rv{animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+.rv:nth-child(1){animation-delay:.1s}.rv:nth-child(2){animation-delay:.25s}.rv:nth-child(3){animation-delay:.4s}.rv:nth-child(4){animation-delay:.55s}.rv:nth-child(5){animation-delay:.7s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+/* marquee */
+.marq{border-top:1px solid color-mix(in srgb,var(--fg) 10%,transparent);border-bottom:1px solid color-mix(in srgb,var(--fg) 10%,transparent);padding:16px 0;overflow:hidden;white-space:nowrap;font-family:var(--display);font-size:22px}
+.marq div{display:inline-block;animation:mq 30s linear infinite}
+.marq span{margin:0 28px}.marq span::after{content:"✦";margin-left:28px;color:var(--accent2);font-size:14px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:110px 0}
+.sec-h{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;margin-bottom:54px}
+.sec-h h2{font-size:clamp(36px,4.5vw,64px)}
+.sec-h p{opacity:.7;max-width:360px;text-align:right}
+.serv{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;background:color-mix(in srgb,var(--fg) 10%,transparent);border-radius:var(--r);overflow:hidden}
+.serv article{background:var(--bg);padding:38px 34px;position:relative;transition:background .3s}
+.serv article:hover{background:var(--bg2)}
+.serv article i{font-style:normal;font-family:var(--display);color:var(--accent2);font-size:14px;letter-spacing:.1em}
+.serv article h3{font-size:26px;margin:14px 0 10px}
+.serv article p{opacity:.75;font-size:15px}
+.serv article::after{content:"→";position:absolute;right:30px;top:36px;color:var(--accent);opacity:0;transform:translateX(-8px);transition:.3s}
+.serv article:hover::after{opacity:1;transform:none}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px}
+.gal figure{overflow:hidden;border-radius:14px;background:var(--bg2)}
+.gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal figure:nth-child(4){grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.gal figure:hover img{transform:scale(1.06)}
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.rev blockquote{background:var(--bg2);border-radius:var(--r);padding:34px;position:relative}
+.rev blockquote::before{content:"“";font-family:var(--display);font-size:90px;line-height:.6;color:var(--accent2);position:absolute;top:26px;left:26px;opacity:.5}
+.rev p{font-size:17px;margin:26px 0 20px;font-style:italic}
+.rev footer{font-size:14px;font-weight:500}.rev footer span{display:block;color:var(--accent2);letter-spacing:2px;font-size:13px}
+.rev-big{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--bg2);border-radius:var(--r);padding:60px}
+.rev-big .n{font-family:var(--display);font-size:120px;line-height:.9}
+.rev-big .s{color:var(--accent2);font-size:28px;letter-spacing:4px}
+/* info */
+.info{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+.info h2{font-size:clamp(36px,4.5vw,60px);margin-bottom:24px}
+.info dl{display:grid;gap:14px;margin-top:26px}
+.info dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+.info dd{font-size:18px;font-weight:400}
+.hours{background:var(--bg2);border-radius:var(--r);padding:34px}
+.hours h3{font-size:24px;margin-bottom:18px}
+.hours ul{list-style:none;display:grid;gap:8px}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px dashed color-mix(in srgb,var(--fg) 15%,transparent);padding:8px 0;font-size:15px}
+.hours li b{font-weight:500;text-transform:capitalize}
+/* final */
+.final{text-align:center;background:var(--fg);color:var(--bg);border-radius:var(--r);padding:90px 30px;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:-40%;background:radial-gradient(40% 40% at 30% 40%,color-mix(in srgb,var(--accent) 60%,transparent),transparent 70%),radial-gradient(35% 35% at 75% 60%,color-mix(in srgb,var(--accent2) 50%,transparent),transparent 70%);filter:blur(30px);opacity:.55;animation:drift 16s ease-in-out infinite alternate}
+.final *{position:relative}
+.final h2{font-size:clamp(38px,5vw,72px);margin-bottom:16px}
+.final p{opacity:.8;margin-bottom:34px;font-size:18px}
+.final .btn-p{background:var(--bg);color:var(--fg)}
+footer.ft{padding:40px 0 60px;font-size:13px;opacity:.65;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer.ft a{text-decoration:underline}
+.wa{position:fixed;right:22px;bottom:22px;z-index:45;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);animation:pulse 2.6s infinite}
+.wa svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%,100%{box-shadow:0 12px 30px -8px rgba(37,211,102,.7)}50%{box-shadow:0 12px 40px -4px rgba(37,211,102,.9)}}
+.io{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.io.in{opacity:1;transform:none}
+@media(max-width:820px){nav ul{display:none}.hero{min-height:80vh;padding:90px 0 60px}.sec-h{grid-template-columns:1fr}.sec-h p{text-align:left}.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}.gal figure:nth-child(4){grid-row:auto}.info{grid-template-columns:1fr}.rev-big{grid-template-columns:1fr;padding:40px}.rev-big .n{font-size:90px}.demo{font-size:10px;bottom:14px;left:14px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.io{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="demo">Muestra · por <b>Wonka</b></div>
+<nav><div class="wrap">
+  <a class="brand" href="#">Parque Hotel</a>
+  <ul><li><a href="#servicios">Comodidades</a></li><li><a href="#galeria">Galería</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <a class="btn btn-p" href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener">Consultar disponibilidad</a>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-bg"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkGWrPACsqIXHFxCVZ4alAq_aX1Ly46D-vG1pbaJzjRpuFygpLKxO9UGE3XiDGWMufEH-KJZyTkWfzvH3Ej8MKYFvQHG2tibtN3KJDEvBLSaGXNmdRzrxBVMJEUZv-oR5FI6XQHgHhKOmE=w1600-h1200-k-no" alt="Parque Hotel"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Alojamiento · Merlo</span>
+    <h1 class="rv">Tu escapada a Merlo<br><em>empieza acá.</em></h1>
+    <p class="rv">Cabañas equipadas, tranquilidad y atención de los dueños. Consultá disponibilidad por WhatsApp.</p>
+    <div class="hero-cta rv">
+      <a class="btn btn-p" href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2l-.4-.2Z"/></svg>Consultar disponibilidad</a>
+      <a class="btn btn-s" href="#servicios">Ver comodidades</a>
+    </div>
+    <div class="rating rv"><span class="s">★★★★☆</span><b>4,3</b> · 862 reseñas en Google</div>
+  </div>
+</header>
+
+<div class="marq"><div><span>Cabañas equipadas</span><span>Wi-Fi y cochera</span><span>Pileta y parque</span><span>Pet friendly</span><span>Desayuno</span><span>Ubicación</span><span>Cabañas equipadas</span><span>Wi-Fi y cochera</span><span>Pileta y parque</span><span>Pet friendly</span><span>Desayuno</span><span>Ubicación</span></div></div>
+
+<section id="servicios"><div class="wrap">
+  <div class="sec-h io"><h2>Comodidades</h2><p>Todo lo que necesitás para descansar.</p></div>
+  <div class="serv"><article class="io" style="transition-delay:0ms"><i>01</i><h3>Cabañas equipadas</h3><p>Cocina completa, ropa blanca, calefacción y aire.</p></article><article class="io" style="transition-delay:70ms"><i>02</i><h3>Wi-Fi y cochera</h3><p>Conexión estable y estacionamiento cubierto.</p></article><article class="io" style="transition-delay:140ms"><i>03</i><h3>Pileta y parque</h3><p>Espacios verdes, parrilla y solárium.</p></article><article class="io" style="transition-delay:210ms"><i>04</i><h3>Pet friendly</h3><p>Tu mascota viene con vos.</p></article><article class="io" style="transition-delay:280ms"><i>05</i><h3>Desayuno</h3><p>Casero, servido en tu cabaña.</p></article><article class="io" style="transition-delay:350ms"><i>06</i><h3>Ubicación</h3><p>A minutos del centro y de los mejores paseos.</p></article></div>
+</div></section>
+
+<section id="galeria" style="padding-top:0"><div class="wrap">
+  <div class="sec-h io"><h2>Galería</h2><p>Un vistazo a Parque Hotel.</p></div>
+  <div class="gal"><figure class="io" style="transition-delay:0ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk9O3Kc04RdfB8j8X8-l_y5LedUSCaMBosd9m9XOAKNZ8Alwxdm0geru6ks9nr-0cLtM1Pna_2yw1590qCd28ziHQfsEE6UzbEq6OaSyEecXgsPFn8dExXomTOiCjWe36540i1PTQ=w1600-h1200-k-no" alt="Parque Hotel 1"></figure><figure class="io" style="transition-delay:60ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmLHtlqVgIymJovh194mp2NukoOT7aQsZwODDHeDDCsK8ixieBdF23Tdd8ahVZq3m29R0c0Cuo7XWl3dI4l22Bky72IUYYLnWCYC0h6LJWGb_7T2uDK0yxAnWeSWd8Ws6-ybWs=w1600-h1200-k-no" alt="Parque Hotel 2"></figure><figure class="io" style="transition-delay:120ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn43xG1w_8JrtRtDtGiKV1lK52rAyhoASqGzob8sxZ2fhVPAHBOmiOG1C_muv6x5QPuy37ls28P_TEBIx5ksfVDDeadedPH0NlvdpKakvemxliVXq3n3GhtLx-fOQ2WoGbegtb8=w1600-h1200-k-no" alt="Parque Hotel 3"></figure><figure class="io" style="transition-delay:180ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk69wZgVleLmi9nYUMjXyGTO6H5oN_ApGazwKlWBc5JkptJP3Xt4_QW4TSRS5PjxL9nXosLGqrbBpIEbvBERNR_AGMb7oks1eGbJMT_tKLROuatJxKkIbZ9gdo5te47L6WL8AIv=w1600-h1200-k-no" alt="Parque Hotel 4"></figure><figure class="io" style="transition-delay:240ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlpB3JiaVnS4jr-Pbw-G6zkuTQ62Soshn16vcb4jfGbnqlwBFcY0rusRQcf7Kpc7L0PVf6Up4K7FWqmPTLca-2hgjIcINCRaFxxEaboJOPv0wNzsZsLjwmgrkvW9pxZcNf2mDwv4A=w1600-h1200-k-no" alt="Parque Hotel 5"></figure><figure class="io" style="transition-delay:300ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpesHrZFmyMxkKOlXH3HKc0LnvvUUpaWaDI-k_r_ESnTR1GxAqn2_cSI-8dhIkQPyLHdgaBMVJYVqwX4mYcCrqgCToaPJ9kPQv8Y_0yUdoZYNLiq5I3uY9EBc6oKB3dDybJocD=w1600-h1200-k-no" alt="Parque Hotel 6"></figure><figure class="io" style="transition-delay:360ms"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmdK3qzTYjCArCzzGH6E3byBHvVAlHU3wYMufk-TrUuL-3HI0JvXNWA9R9aVKDey0Ut_n78Y60qjaIsEiuaO78Vrj4GJ3gk8TE3nzzcUUA9rDGXuPXXrSD8WbbP7lE_DcOCnhTDiw=w1600-h1200-k-no" alt="Parque Hotel 7"></figure><figure class="io" style="transition-delay:420ms"><img src="https://lh3.googleusercontent.com/gps-proxy/ALd4DhFuVpDlxLvfLsuOaG9FUglU9k-I4-hZgwklz3GuXhM8RkTGV7jQ7BnrXRIIUaQrRFjJ6H_64PFWP61CpL90Z0YNU8sfkkjGNhCEcQ-17VWXnPOIxQZ9hOR3SzPwsMGeqFGPm8lysrJnQTV2LtVDm2Pv5lBhGnyc5C3iVfPyPn01-zatorB3gDPMFQ=w1600-h1200-k-no" alt="Parque Hotel 8"></figure></div>
+</div></section>
+
+<section id="opiniones" style="padding-top:0"><div class="wrap">
+  <div class="sec-h io"><h2>Lo que dicen<br>nuestros clientes</h2><p>Opiniones reales publicadas en Google.</p></div>
+  <div class="rev-big io"><div><div class="n">4,3</div><div class="s">★★★★☆</div></div><div><h3 style="font-size:30px;margin-bottom:12px">862 personas ya opinaron en Google</h3><p style="opacity:.75">Calificación promedio de <b>4,3</b> sobre 5. Las reseñas reales de Google se muestran acá automáticamente.</p></div></div>
+</div></section>
+
+<section id="contacto" style="padding-top:0"><div class="wrap info">
+  <div class="io">
+    <h2>Encontranos</h2>
+    <p style="opacity:.8;max-width:460px">Cabañas equipadas, tranquilidad y atención de los dueños. Consultá disponibilidad por WhatsApp.</p>
+    <dl>
+      <div><dt>Dirección</dt><dd><a href="https://www.google.com/maps/place/Parque+Hotel/data=!4m10!3m9!1s0x95d2e154a84c48cb:0xa33ce950c1da1d8b!5m2!4m1!1i2!8m2!3d-32.3470039!4d-65.001099!16s%2Fg%2F11btm9_t4g!19sChIJy0hMqFTh0pURix3awVDpPKM?authuser=0&amp;hl=es&amp;g_ep=EgoyMDI2MDkxNi4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener">Av. del Sol 821, D5881 San Luis </a></dd></div>
+      <div><dt>WhatsApp / Teléfono</dt><dd><a href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener">02656475110</a></dd></div>
+      
+    </dl>
+  </div>
+  <div class="hours io" style="transition-delay:120ms">
+    <h3>Horarios</h3>
+    <p style="opacity:.75">Consultá horarios y disponibilidad por WhatsApp.</p><a class="btn btn-p" style="margin-top:20px" href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener">Consultar disponibilidad</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="final io">
+  <h2>Consultá fechas</h2>
+  <p>Decinos cuándo venís y cuántos son, y te pasamos disponibilidad y precio.</p>
+  <a class="btn btn-p" href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener">Consultar disponibilidad →</a>
+</div></div></section>
+
+<div class="wrap"><footer class="ft">
+  <span>© 2026 Parque Hotel · Merlo</span>
+  <span>Sitio de demostración creado por <a href="https://www.wonkadev.online" target="_blank" rel="noopener">Wonka Desarrollo Web</a>. No es el sitio oficial del negocio.</span>
+</footer></div>
+
+<a class="wa" href="https://wa.me/5492656475110?text=Hola%20Parque%20Hotel!%20Vi%20su%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2l-.4-.2Z"/></svg></a>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.io').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
