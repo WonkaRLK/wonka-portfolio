@@ -7,6 +7,7 @@ import GoldenTicket from "@/components/GoldenTicket";
 import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
+import MuestrasPreview from "@/components/MuestrasPreview";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <Process id="proceso" />
         <TechStack />
         <Projects id="proyectos" />
+        <MuestrasPreview id="muestras" />
         <FAQ id="preguntas" />
         <ContactForm id="contacto" />
         <Footer />

@@ -1,8 +1,9 @@
 const navLinks = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Proceso", href: "/#proceso" },
+  { label: "Proyectos", href: "/#proyectos" },
+  { label: "Muestras", href: "/muestras" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 const socialLinks = [
