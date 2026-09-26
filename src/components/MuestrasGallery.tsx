@@ -20,14 +20,14 @@ export function MuestraCard({ m, index = 0 }: { m: Muestra; index?: number }) {
       href={`/muestras/${m.slug}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-wonka-gold/50 hover:-translate-y-1.5 hover:shadow-[0_16px_50px_rgba(212,168,67,0.25)] transition-all duration-300"
+      className="group block rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-wonka-gold/50 hover:-translate-y-[6px] hover:shadow-[0_16px_50px_rgba(212,168,67,0.25)] transition-[transform,box-shadow,border-color] duration-300 will-change-transform"
     >
-      <div className="relative aspect-[16/10] bg-wonka-purple overflow-hidden">
+      <div className="relative aspect-[16/10] bg-[#1a0830] overflow-hidden isolate [transform:translateZ(0)]">
         <Image
           src={`/muestras/${m.slug}/preview.webp`}
           alt={`Muestra de web para ${m.name}`}
           fill
-          className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
+          className="object-cover object-top scale-[1.01] group-hover:scale-[1.04] transition-transform duration-700 [backface-visibility:hidden] will-change-transform"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-wonka-purple-dark/80 to-transparent" />
