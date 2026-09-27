@@ -5,11 +5,13 @@ import ScrollReveal from "./ScrollReveal";
 import { MuestraCard } from "./MuestrasGallery";
 import { muestras, rubros } from "@/lib/muestras";
 
-// Una muestra destacada por rubro (la de más reseñas), hasta 3 en la home.
-const featured = rubros
-  .map((r) => muestras.find((m) => m.rubroKey === r.key))
-  .filter((m): m is NonNullable<typeof m> => Boolean(m))
-  .slice(0, 3);
+// 9 muestras en la home: se reparten entre rubros (primero la mejor de cada uno, después las segundas, etc.).
+const featured = (() => {
+  const byRubro = rubros.map((r) => muestras.filter((m) => m.rubroKey === r.key));
+  const out: typeof muestras = [];
+  for (let i = 0; out.length < 9 && byRubro.some((l) => l[i]); i++) for (const l of byRubro) if (l[i] && out.length < 9) out.push(l[i]);
+  return out;
+})();
 
 export default function MuestrasPreview({ id }: { id?: string }) {
   return (

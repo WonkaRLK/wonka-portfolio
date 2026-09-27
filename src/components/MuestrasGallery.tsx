@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { muestras, rubros, type Muestra } from "@/lib/muestras";
 
 const WA =
@@ -11,11 +11,9 @@ const WA =
 export function MuestraCard({ m, index = 0 }: { m: Muestra; index?: number }) {
   return (
     <motion.a
-      layout
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.96 }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4), ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.35), ease: [0.22, 1, 0.36, 1] }}
       href={`/muestras/${m.slug}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -38,7 +36,7 @@ export function MuestraCard({ m, index = 0 }: { m: Muestra; index?: number }) {
           {m.rubro}
         </span>
         <span className="absolute bottom-3 right-3 px-3 py-1.5 rounded-full text-xs font-body font-semibold text-wonka-purple-dark bg-wonka-gold opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-          Ver muestra →
+          Ver muestra <span aria-hidden className="inline-block group-hover:animate-[nudge_1.1s_ease-in-out_infinite]">→</span>
         </span>
       </div>
       <div className="p-4">
@@ -89,13 +87,12 @@ export default function MuestrasGallery({ initial = "todos" }: { initial?: strin
         })}
       </div>
 
-      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <AnimatePresence mode="popLayout">
-          {list.map((m, i) => (
-            <MuestraCard key={m.slug} m={m} index={i} />
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      {/* La grilla se vuelve a montar con cada filtro: entrada suave en cascada, sin reacomodos bruscos */}
+      <div key={active} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {list.map((m, i) => (
+          <MuestraCard key={m.slug} m={m} index={i} />
+        ))}
+      </div>
 
       <div className="mt-16 text-center">
         <p className="font-body text-wonka-cream-dark/70 mb-5">
