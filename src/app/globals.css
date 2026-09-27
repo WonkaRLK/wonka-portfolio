@@ -186,3 +186,43 @@ body {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(4px); }
 }
+
+/* "Wonka" del navbar: cada ~3 s pasa un brillo dorado por las letras y una línea lo subraya y se retira */
+.brand-wonka {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(110deg, #d4a843 0%, #d4a843 42%, #fff3c4 50%, #d4a843 58%, #d4a843 100%);
+  background-size: 260% 100%;
+  background-position: 120% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: brandShine 3.4s ease-in-out infinite;
+}
+.brand-wonka::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #d4a843, #f0d48a);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: brandLine 3.4s ease-in-out infinite;
+}
+@keyframes brandShine {
+  0%, 52% { background-position: 120% 0; }
+  78%, 100% { background-position: -120% 0; }
+}
+@keyframes brandLine {
+  0%, 50% { transform: scaleX(0); transform-origin: left; }
+  64% { transform: scaleX(1); transform-origin: left; }
+  65% { transform: scaleX(1); transform-origin: right; }
+  82%, 100% { transform: scaleX(0); transform-origin: right; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-wonka, .brand-wonka::after { animation: none; }
+  .brand-wonka { color: #d4a843; background: none; }
+}

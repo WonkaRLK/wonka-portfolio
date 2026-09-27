@@ -34,10 +34,7 @@ export default function Navbar() {
           className="fixed top-0 left-0 right-0 z-50 bg-wonka-purple-dark/90 backdrop-blur-md border-b border-wonka-purple-light/20"
         >
           <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-            <a
-              href="#"
-              className="font-heading font-bold text-xl text-wonka-gold"
-            >
+            <a href="/" className="font-heading font-bold text-xl brand-wonka">
               Wonka
             </a>
 
