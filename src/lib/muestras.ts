@@ -1,5 +1,5 @@
 // Generado por D:/tools/prospectos/gen-previews.mjs — no editar a mano
-export interface Muestra { slug: string; name: string; rubro: string; rubroKey: string; ciudad: string; rating: number | null; reviews: number }
+export interface Muestra { slug: string; name: string; fullH: number; rubro: string; rubroKey: string; ciudad: string; rating: number | null; reviews: number }
 export const rubros: { key: string; label: string }[] = [
   {
     "key": "cabanas",
@@ -34,6 +34,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "complejo-petunia",
     "name": "Complejo Petunia",
+    "fullH": 2531,
     "rubro": "Alojamientos",
     "rubroKey": "cabanas",
     "ciudad": "Bariloche",
@@ -43,6 +44,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "windmuhle-apart-hotel-spa",
     "name": "Windmuhle Apart Hotel & Spa",
+    "fullH": 2531,
     "rubro": "Alojamientos",
     "rubroKey": "cabanas",
     "ciudad": "Villa General Belgrano",
@@ -52,6 +54,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "hosteria-aca-al-sur",
     "name": "Hostería ACA al Sur",
+    "fullH": 2531,
     "rubro": "Alojamientos",
     "rubroKey": "cabanas",
     "ciudad": "Villa La Angostura",
@@ -61,6 +64,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "placeres-de-la-costa",
     "name": "Placeres de la Costa",
+    "fullH": 2531,
     "rubro": "Alojamientos",
     "rubroKey": "cabanas",
     "ciudad": "Gualeguaychú",
@@ -70,6 +74,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "parque-hotel",
     "name": "Parque Hotel",
+    "fullH": 2531,
     "rubro": "Alojamientos",
     "rubroKey": "cabanas",
     "ciudad": "Merlo",
@@ -79,6 +84,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "medea-medicina-estetica",
     "name": "Medea Medicina Estética",
+    "fullH": 2531,
     "rubro": "Estética",
     "rubroKey": "estetica",
     "ciudad": "La Plata",
@@ -88,6 +94,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "depibiu-la-plata",
     "name": "Depibiu La Plata",
+    "fullH": 2531,
     "rubro": "Estética",
     "rubroKey": "estetica",
     "ciudad": "La Plata",
@@ -97,6 +104,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "renuova",
     "name": "Renuova",
+    "fullH": 2531,
     "rubro": "Estética",
     "rubroKey": "estetica",
     "ciudad": "La Plata",
@@ -106,6 +114,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "fiona-estetica",
     "name": "FIONA ESTETICA",
+    "fullH": 2531,
     "rubro": "Estética",
     "rubroKey": "estetica",
     "ciudad": "La Plata",
@@ -115,6 +124,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "centro-de-estetica-osiris",
     "name": "Centro de Estética \"Osiris\"",
+    "fullH": 2531,
     "rubro": "Estética",
     "rubroKey": "estetica",
     "ciudad": "Rosario",
@@ -124,6 +134,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "maycenter-odontologia",
     "name": "Maycenter Odontología",
+    "fullH": 2531,
     "rubro": "Odontología",
     "rubroKey": "odontologia",
     "ciudad": "Buenos Aires",
@@ -133,6 +144,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "clinica-arias",
     "name": "Clínica Arias",
+    "fullH": 2379,
     "rubro": "Odontología",
     "rubroKey": "odontologia",
     "ciudad": "Mendoza",
@@ -142,6 +154,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "llompart-odontologia",
     "name": "Llompart Odontología",
+    "fullH": 2476,
     "rubro": "Odontología",
     "rubroKey": "odontologia",
     "ciudad": "La Plata",
@@ -151,6 +164,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "gimnasio-city-hall",
     "name": "GIMNASIO CITY HALL",
+    "fullH": 2531,
     "rubro": "Gimnasios",
     "rubroKey": "gimnasio",
     "ciudad": "Mar del Plata",
@@ -160,6 +174,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "gimnasios-athlon",
     "name": "GIMNASIOS ATHLON",
+    "fullH": 2531,
     "rubro": "Gimnasios",
     "rubroKey": "gimnasio",
     "ciudad": "Rosario",
@@ -169,6 +184,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "obelius-gym",
     "name": "OBELIUS GYM",
+    "fullH": 2531,
     "rubro": "Gimnasios",
     "rubroKey": "gimnasio",
     "ciudad": "La Plata",
@@ -178,6 +194,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "inmobiliaria-fangio",
     "name": "Inmobiliaria Fangio",
+    "fullH": 2531,
     "rubro": "Inmobiliarias",
     "rubroKey": "inmobiliaria",
     "ciudad": "Mendoza",
@@ -187,6 +204,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "grupo-noc-servicios-inmobiliarios",
     "name": "GRUPO NOC - Servicios Inmobiliarios",
+    "fullH": 2531,
     "rubro": "Inmobiliarias",
     "rubroKey": "inmobiliaria",
     "ciudad": "Córdoba",
@@ -196,6 +214,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "estudio-juridico-lucas-gomez",
     "name": "Estudio Jurídico Lucas Gómez",
+    "fullH": 2329,
     "rubro": "Estudios jurídicos",
     "rubroKey": "juridico",
     "ciudad": "Buenos Aires",
@@ -205,6 +224,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "chaud-asociados",
     "name": "Chaud & Asociados",
+    "fullH": 2531,
     "rubro": "Estudios jurídicos",
     "rubroKey": "juridico",
     "ciudad": "Mendoza",
@@ -214,6 +234,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "casa-moda",
     "name": "Casa Moda",
+    "fullH": 2531,
     "rubro": "Indumentaria",
     "rubroKey": "ropa",
     "ciudad": "Mar del Plata",
@@ -223,6 +244,7 @@ export const muestras: Muestra[] = [
   {
     "slug": "tiendas-leon",
     "name": "Tiendas León",
+    "fullH": 2440,
     "rubro": "Indumentaria",
     "rubroKey": "ropa",
     "ciudad": "Córdoba",

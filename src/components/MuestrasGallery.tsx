@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { muestras, rubros, type Muestra } from "@/lib/muestras";
@@ -22,15 +21,19 @@ export function MuestraCard({ m, index = 0 }: { m: Muestra; index?: number }) {
       rel="noopener noreferrer"
       className="group block rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-wonka-gold/50 hover:-translate-y-[6px] hover:shadow-[0_16px_50px_rgba(212,168,67,0.25)] transition-[transform,box-shadow,border-color] duration-300 will-change-transform"
     >
-      <div className="relative aspect-[16/10] bg-[#1a0830] overflow-hidden isolate [transform:translateZ(0)]">
-        <Image
-          src={`/muestras/${m.slug}/preview.webp`}
+      <div className="relative aspect-[16/10] bg-[#1a0830] overflow-hidden isolate [transform:translateZ(0)] [container-type:size]">
+        {/* Captura alta: al pasar el mouse "scrollea" la web de la muestra */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`/muestras/${m.slug}/preview-full.webp`}
           alt={`Muestra de web para ${m.name}`}
-          fill
-          className="object-cover object-top scale-[1.01] group-hover:scale-[1.04] transition-transform duration-700 [backface-visibility:hidden] will-change-transform"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          width={900}
+          height={m.fullH || 2000}
+          loading="lazy"
+          className="absolute inset-x-0 top-0 w-full h-auto [transition-property:transform] [transition-timing-function:cubic-bezier(.4,0,.2,1)] [transition-duration:.9s] group-hover:[transition-timing-function:linear] group-hover:[transition-duration:var(--scroll-dur)] group-hover:[transform:translateY(calc(100cqh-100%))] motion-reduce:transition-none motion-reduce:group-hover:transform-none [backface-visibility:hidden] will-change-transform"
+          style={{ ["--scroll-dur" as string]: `${Math.max(3, Math.min(9, ((m.fullH || 2000) / 900) * 2.2))}s` }}
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-wonka-purple-dark/80 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-wonka-purple-dark/80 to-transparent pointer-events-none" />
         <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-body font-semibold uppercase tracking-wider bg-wonka-purple-dark/80 backdrop-blur text-wonka-gold border border-wonka-gold/30">
           {m.rubro}
         </span>
