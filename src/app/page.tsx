@@ -21,12 +21,12 @@ export default function Home() {
         <FloatingChocolates />
         <Navbar />
         <Hero />
+        <Projects id="proyectos" />
         <MuestrasPreview id="muestras" />
         <Services id="servicios" />
         <GoldenTicket />
         <Process id="proceso" />
         <TechStack />
-        <Projects id="proyectos" />
         <FAQ id="preguntas" />
         <ContactForm id="contacto" />
         <Footer />

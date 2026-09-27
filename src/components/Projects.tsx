@@ -42,7 +42,7 @@ export default function Projects({ id }: { id?: string }) {
     <section id={id} className="px-6 max-w-5xl mx-auto">
       <ScrollReveal>
         <h2
-          className="font-heading font-bold text-4xl sm:text-5xl text-wonka-gold text-center mb-4 pt-20"
+          className="font-heading font-bold text-4xl sm:text-5xl text-wonka-gold text-center mb-4 pt-24"
           style={{ textShadow: "0 4px 15px rgba(0,0,0,0.8)" }}
         >
           Proyectos
