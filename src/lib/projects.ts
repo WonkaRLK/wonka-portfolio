@@ -12,6 +12,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "byzoc",
+    name: "Byzoc",
+    description:
+      "Web comercial de Byzoc y las webs de clientes de su portfolio: recorridos 3D al deslizar, ilustraciones animadas por código y paneles propios.",
+    image: "/projects/byzoc-1.webp",
+    images: [
+      "/projects/byzoc-1.webp",
+      "/projects/byzoc-2.webp",
+      "/projects/byzoc-3.webp",
+      "/projects/byzoc-4.webp",
+      "/projects/byzoc-5.webp",
+    ],
+    url: "https://byzoc.com",
+    tech: ["Astro", "Cloudflare Workers", "Three.js", "GSAP"],
+    highlights: [
+      "Web comercial + 12 webs de clientes",
+      "Animaciones 3D y de scroll",
+      "Paneles /admin para cargar productos",
+    ],
+    year: 2026,
+  },
+  {
     slug: "biblioteca-oculta",
     name: "Biblioteca Oculta",
     description:
